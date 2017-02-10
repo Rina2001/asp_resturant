@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@using Resteraunt.Models.Entities
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -132,132 +134,41 @@
             <div class="tasty-menu-inner">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h3 class="inner-sub-title title-bar-full-width">Lunch Menu</h3>
+                    
                     <ul>
-                        <li>
+                       @foreach (var food in ViewData["LUNCH_FOOD"] as List<Food>)
+                            {<li>
                             <div class="media">
                                 <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
+                                    <img src="@food.food_image" width="90px" height="90px" alt="client" class="img-responsive">
                                 </a>
                                 <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$12</span>
+                                    <h4><a href="#">@food.food</a></h4>
+                                    <p>@food.description</p>
+                                    <span>$ @food.price</span>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$12</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$12</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$12</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$12</span>
-                                </div>
-                            </div>
-                        </li>
+                        }
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h3 class="inner-sub-title title-bar-full-width">Dinner Menu</h3>
-                    <ul>
-                        <li>
+                     <ul>
+                       @foreach (var food in ViewData["DINNER_FOOD"] as List<Food>)
+                            {<li>
                             <div class="media">
                                 <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
+                                    <img src="@food.food_image" width="90px" height="90px" alt="client" class="img-responsive">
                                 </a>
                                 <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$20</span>
+                                    <h4><a href="#">@food.food</a></h4>
+                                    <p>@food.description</p>
+                                    <span>$ @food.price</span>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$20</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$20</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$20</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <img src="~/Content/web/img/dish/2.png" alt="client" class="img-responsive">
-                                </a>
-                                <div class="media-body">
-                                    <h4><a href="#">Menu Title Here</a></h4>
-                                    <p>We create, make and serve fresho </p>
-                                    <span>$20</span>
-                                </div>
-                            </div>
-                        </li>
+                        }
                     </ul>
                 </div>
             </div>
